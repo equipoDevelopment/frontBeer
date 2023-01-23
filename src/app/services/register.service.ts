@@ -8,7 +8,7 @@ import { catchError, Observable, of } from 'rxjs';
 })
 export class RegisterService {
   
-  private urlpost = 'http://localhost:3000/api/new_user';
+  private urlpost = 'http://localhost:3000/api/register';
 
 
   constructor(private httpClient: HttpClient) { }
