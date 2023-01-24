@@ -2,14 +2,14 @@ body{
     width: 100%;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;;
+    min-height: 100vh;
 }
 
 .home-container{
     text-align: center;
     height: 100px;
 }
-
+    
 .header{
     color: orangered;
     font-size: 50px;
@@ -85,8 +85,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content:space-around;
-    height: 200px;
-    // border: 2px solid black;
+    height: 220px;
 }
 
 .imagenTipo{
@@ -107,12 +106,13 @@ body{
 }
 
 .separador{
-    margin-top: 80px;
+    margin-top: 40px;
     border-top: 1px rgb(147, 147, 147) solid;;
+    margin-bottom: 20px;
 }
 
 .sugerencias{
-    margin-top: 20px;
+    // margin-top: 20px;
     display: flex;
     flex-direction: row;
 }
@@ -120,45 +120,20 @@ body{
 .columnaIzquierda{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    // border-right: 1px solid rgb(147, 147, 147);
-    height: 100vh;
-    width: 30%;
-}
-
-#imagenSeleccion{
-    height: 200px;
-    width: 170px;
-    border: 2px solid rgb(147, 147, 147);
-    margin-top: 50px;
-    border-radius: 20px;
-}
-
-.descripcion{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid rgb(147, 147, 147);
-    height: 50px;
-    width: 240px;
-    margin-top: 70px;;
-    border-radius: 20px;
+    margin-left: 10px;
+    width: 33%;
 }
 
 .columnaCentral{
     display: flex;
     flex-direction: column;
-    // border: 2px solid rgb(147, 147, 147);
     width: 33%;
-
 }
 
-.sugerencia{
+.columnaDerecha{
     display: flex;
-    flex-direction: row;
-    margin-left: 20px;
-    margin-bottom: 30px;
-    // border: 2px solid rgb(147, 147, 147);
+    flex-direction: column;
+    width: 33%;
 }
 
 #imagenSugerencia{
@@ -167,19 +142,49 @@ body{
     border: 2px solid rgb(147, 147, 147);
 }
 
-.nombreProducto{
-    margin-left: 20px;
-}
+@media only screen and (max-width: 480px) {
 
-.puntuacion{
-    margin-left: 20px;
-}
+    .home-container{
+        height: 70px;
+    }
 
-.columnaDerecha{
-    display: flex;
-    flex-direction: column;
-    // border: 2px solid rgb(147, 147, 147);
-    width: 33%;
-}
+    .header {
+        font-size: 30px;
+    }
 
+    .subheader{
+        font-size: 20px;
+    }
+
+    .news{
+        height: 15px;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    #tipoCerveza{
+        margin-top: 40px;
+    }
+
+    .imagenTipo{
+        height: 160px;
+        width: 130px;
+    }
+
+    .imagen{
+        height: 140px;
+        width: 120px;
+    }
+    
+    .separador{
+        margin-top: 10px;
+    }
+    .card-text{
+        display: none;
+    }
+
+    small{
+        display: none;
+    }
+}
 
