@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ShopService } from '../../services/shop.service';
 import { productComponent } from './shop';
 
 @Component({
@@ -10,5 +11,12 @@ import { productComponent } from './shop';
 export class ShopComponent {
   title = 'shop';
   products:productComponent[]=[];
+
+  constructor( shopService:ShopService){
+    this.type=[];
+      
+  }
+
+
 
 }

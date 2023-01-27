@@ -12,5 +12,4 @@ export interface productComponent {
     novelty: boolean,
     price: number,
     photo: string,
-    timestamps: true
 }
