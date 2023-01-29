@@ -77,7 +77,7 @@ export class RegisterComponent {
         Solo queda un último paso para tomarnos unas cervezas 🍻\n
         Debes verificar tu cuenta de correo 🤜🏼🤛🏼\n
         💌 Revisa en tu email:  ${email}\n`)
-        console.log( Object.values(result));
+        console.log(Object.values(result));
       } else alert(resultString)
     })
   }
