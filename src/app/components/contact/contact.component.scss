@@ -8,6 +8,17 @@ img{
 
 p{
     font-weight: 600;
+    padding: 5px;
+}
+
+// .btn{
+//     border-color: #807e7e4f!important;
+// }
+
+#enlaces{
+   a{
+    text-align: start;
+} 
 }
 
 a:hover{
@@ -17,9 +28,4 @@ a:hover{
     transition: all 0.2s ease;
     border-color: rgb(255, 162, 49)!important;
 }
-.btn{
-    border-color: #807e7e4f!important;
-}
-
-
 
