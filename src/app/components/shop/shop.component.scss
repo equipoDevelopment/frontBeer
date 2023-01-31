@@ -80,6 +80,17 @@ body{
     background:rgb(199, 174, 94);
 }
 
+#buttonSeleccion{
+    display: block;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+}
+
+#buttonSeleccion:hover{
+    background:rgb(199, 174, 94);
+}
+
 #tipoCerveza{
     margin-top: 80px;
     display: flex;

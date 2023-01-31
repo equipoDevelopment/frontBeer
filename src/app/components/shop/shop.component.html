@@ -16,42 +16,40 @@
         <div class="dropdown">
             <button id="butttonTipos">Tipos de cervezas</button>
             <div class="dropdown-content">
-                <a *ngFor="let product of products">{{product.category}}</a>
-                <!-- value="rubia" click="selected(Rubia)" -->
+                <button id="buttonSeleccion" (click)="getCategory('Rubia')">Rubia</button>
+                <button id="buttonSeleccion" (click)="getCategory('Tostada')">Tostada</button>
+                <button id="buttonSeleccion" (click)="getCategory('Negra')">Negra</button>
             </div>
         </div>
     </div>
-    <div id="tipoCerveza" >
-        <!-- *ngFor="let novelty of beers" -->
-        <div class="imagenTipo" *ngFor="let product of products">
-            <img class="imagen" src="{{product.photo}}">
+    <div id="tipoCerveza">
+        <div class="imagenTipo" >
+            <img class="imagen" src="{{novelty_products[0].photo1}}">
         </div>
         <div class="imagenTipo">
-            <img class="imagen" src="https://okasional-beer.com/14583-large_default/alice-the-dog.jpg">
+            <img class="imagen" src="{{novelty_products[1].photo1}}">
         </div>
         <div class="imagenTipo">
-            <img class="imagen" src="https://okasional-beer.com/14583-large_default/alice-the-dog.jpg">
+            <img class="imagen" src="{{novelty_products[2].photo1}}">
         </div>
     </div>
     <div class="separador">
     </div>
     <div class="sugerencias">
         <div class="columnaIzquierda">
-            <div class="sugerencias p-1">
+            <div class="sugerencias p-1" *ngFor="let product of products;let i = index">
                 <div class="card mb-3">
                     <div class="row g-0">
                         <img id="imagenSugerencia"
-                            src="https://okasional-beer.com/14583-large_default/alice-the-dog.jpg"
+                            src="{{product.photo1}}"
                             class="rounded" alt="...">
                         <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Negra Mercadona</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel
-                                    cursus tellus, fringilla tempor tortor. Etiam pharetra pretium est.</p>
-                                <p class="card-text">Precio: <strong>3.95€</strong> </p>
-                                <small class="text-muted"> Puntuación: <i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-half"></i><i class="bi bi-star"></i></small>
+                            <div class="card-body" >
+                                <h5 class="card-title">{{product.name}}</h5>
+                                <p class="card-text">{{product.description}}</p>
+                                <p class="card-text">Precio: <strong>{{product.price}}€</strong> </p>
+                                <small class="text-muted" ><i *ngFor="let in of puntuacion(product.score)" class="bi bi-star-fill"></i></small>
+                                    
                                 <br>
                                 <button class="btn btn-dark btn-sm position-absolute bottom-0 end-0 mb-3 mx-3"></button>
                                 <button type="button"
@@ -64,226 +62,6 @@
                     </div>
                 </div>
             </div>
-            <div class="sugerencias p-1">
-                <div class="card mb-3">
-                    <div class="row g-0">
-                        <img id="imagenSugerencia"
-                            src="https://okasional-beer.com/14247-large_default/off-the-record.jpg"
-                            class="rounded" alt="...">
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Negra Carrefour</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel
-                                    cursus tellus, fringilla tempor tortor. Etiam pharetra pretium est.</p>
-                                <p class="card-text">Precio: <strong>3.95€</strong> </p>
-                                <small class="text-muted"> Puntuación: <i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-half"></i><i class="bi bi-star"></i></small>
-                                <br>
-                                <button class="btn btn-dark btn-sm position-absolute bottom-0 end-0 mb-3 mx-3"></button>
-                                <button type="button"
-                                    class="btn btn-dark btn-sm position-absolute bottom-0 end-0 mb-3 mx-3">
-                                    <i class="bi bi-cart4"></i><span><span class="visually-hidden">Añadido al
-                                            carrito</span></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="sugerencias p-1">
-                <div class="card mb-3">
-                    <div class="row g-0">
-                        <img id="imagenSugerencia"
-                            src="https://okasional-beer.com/14208-large_default/nitro-peanut-better-stout.jpg"
-                            class="rounded" alt="...">
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Rubia Turia</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel
-                                    cursus tellus, fringilla tempor tortor. Etiam pharetra pretium est.</p>
-                                <p class="card-text">Precio: <strong>4.95€</strong> </p>
-                                <small class="text-muted"> Puntuación: <i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-half"></i><i class="bi bi-star"></i></small>
-                                <br>
-                                <button class="btn btn-dark btn-sm position-absolute bottom-0 end-0 mb-3 mx-3"></button>
-                                <button type="button"
-                                    class="btn btn-dark btn-sm position-absolute bottom-0 end-0 mb-3 mx-3">
-                                    <i class="bi bi-cart4"></i><span><span class="visually-hidden">Añadido al
-                                            carrito</span></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-        <div class="columnaCentral">
-            <div class="sugerencias p-1">
-                <div class="card mb-3">
-                    <div class="row g-0">
-                        <img id="imagenSugerencia"
-                            src="https://okasional-beer.com/14583-large_default/alice-the-dog.jpg"
-                            class="rounded" alt="...">
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Negra Mercadona</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel
-                                    cursus tellus, fringilla tempor tortor. Etiam pharetra pretium est.</p>
-                                <p class="card-text">Precio: <strong>3.95€</strong> </p>
-                                <small class="text-muted"> Puntuación: <i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-half"></i><i class="bi bi-star"></i></small>
-                                <br>
-                                <button class="btn btn-dark btn-sm position-absolute bottom-0 end-0 mb-3 mx-3"></button>
-                                <button type="button"
-                                    class="btn btn-dark btn-sm position-absolute bottom-0 end-0 mb-3 mx-3">
-                                    <i class="bi bi-cart4"></i><span> <span class="visually-hidden">Añadido al
-                                            carrito</span></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="sugerencias p-1">
-                <div class="card mb-3">
-                    <div class="row g-0">
-                        <img id="imagenSugerencia"
-                            src="https://okasional-beer.com/14247-large_default/off-the-record.jpg"
-                            class="rounded" alt="...">
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Negra Carrefour</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel
-                                    cursus tellus, fringilla tempor tortor. Etiam pharetra pretium est.</p>
-                                <p class="card-text">Precio: <strong>3.95€</strong> </p>
-                                <small class="text-muted"> Puntuación: <i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-half"></i><i class="bi bi-star"></i></small>
-                                <br>
-                                <button class="btn btn-dark btn-sm position-absolute bottom-0 end-0 mb-3 mx-3"></button>
-                                <button type="button"
-                                    class="btn btn-dark btn-sm position-absolute bottom-0 end-0 mb-3 mx-3">
-                                    <i class="bi bi-cart4"></i><span><span class="visually-hidden">Añadido al
-                                            carrito</span></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="sugerencias p-1">
-                <div class="card mb-3">
-                    <div class="row g-0">
-                        <img id="imagenSugerencia"
-                            src="https://okasional-beer.com/14208-large_default/nitro-peanut-better-stout.jpg"
-                            class="rounded" alt="...">
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Rubia Turia</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel
-                                    cursus tellus, fringilla tempor tortor. Etiam pharetra pretium est.</p>
-                                <p class="card-text">Precio: <strong>4.95€</strong> </p>
-                                <small class="text-muted"> Puntuación: <i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-half"></i><i class="bi bi-star"></i></small>
-                                <br>
-                                <button class="btn btn-dark btn-sm position-absolute bottom-0 end-0 mb-3 mx-3"></button>
-                                <button type="button"
-                                    class="btn btn-dark btn-sm position-absolute bottom-0 end-0 mb-3 mx-3">
-                                    <i class="bi bi-cart4"></i><span><span class="visually-hidden">Añadido al
-                                            carrito</span></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="columnaDerecha">
-            <div class="sugerencias p-1">
-                <div class="card mb-3">
-                    <div class="row g-0">
-                        <img id="imagenSugerencia"
-                            src="https://okasional-beer.com/14596-large_default/silent-majority.jpg"
-                            class="rounded" alt="...">
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Tostada Turia</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel
-                                    cursus tellus, fringilla tempor tortor. Etiam pharetra pretium est.</p>
-                                <p class="card-text">Precio: <strong>5.95€</strong> </p>
-                                <small class="text-muted"> Puntuación: <i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-half"></i><i class="bi bi-star"></i></small>
-                                <br>
-                                <button class="btn btn-dark btn-sm position-absolute bottom-0 end-0 mb-3 mx-3"></button>
-                                <button type="button"
-                                    class="btn btn-dark btn-sm position-absolute bottom-0 end-0 mb-3 mx-3">
-                                    <i class="bi bi-cart4"></i><span><span class="visually-hidden">Añadido al
-                                            carrito</span></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="sugerencias p-1">
-                <div class="card mb-3">
-                    <div class="row g-0">
-                        <img id="imagenSugerencia"
-                            src="https://okasional-beer.com/14247-large_default/off-the-record.jpg"
-                            class="rounded" alt="...">
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Tostada Carrefour</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel
-                                    cursus tellus, fringilla tempor tortor. Etiam pharetra pretium est.</p>
-                                <p class="card-text">Precio: <strong>3.95€</strong> </p>
-                                <small class="text-muted"> Puntuación: <i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-half"></i><i class="bi bi-star"></i></small>
-                                <br>
-                                <button class="btn btn-dark btn-sm position-absolute bottom-0 end-0 mb-3 mx-3"></button>
-                                <button type="button"
-                                    class="btn btn-dark btn-sm position-absolute bottom-0 end-0 mb-3 mx-3">
-                                    <i class="bi bi-cart4"></i><span><span class="visually-hidden">Añadido al
-                                            carrito</span></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="sugerencias p-1">
-                <div class="card mb-3">
-                    <div class="row g-0">
-                        <img id="imagenSugerencia"
-                            src="https://okasional-beer.com/14208-large_default/nitro-peanut-better-stout.jpg"
-                            class="rounded" alt="...">
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Tostada Hacendado</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel
-                                    cursus tellus, fringilla tempor tortor. Etiam pharetra pretium est.</p>
-                                <p class="card-text">Precio: <strong>6.95€</strong> </p>
-                                <small class="text-muted"> Puntuación: <i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-half"></i><i class="bi bi-star"></i></small>
-                                <br>
-                                <button class="btn btn-dark btn-sm position-absolute bottom-0 end-0 mb-3 mx-3"></button>
-                                <button type="button"
-                                    class="btn btn-dark btn-sm position-absolute bottom-0 end-0 mb-3 mx-3">
-                                    <i class="bi bi-cart4"></i><span><span class="visually-hidden">Añadido al
-                                            carrito</span></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div>       
 </body>

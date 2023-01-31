@@ -9,13 +9,22 @@ import { Product } from '../components/models/shop';
 export class ShopService {
 
   private url_get = 'http://localhost:3000/api/get_products';
-  private url_gets = 'http://localhost:300/api/get_product_id';
+  private url_get_category = 'http://localhost:3000/api/get_productCategory/';
+  private url_get_novelty = 'http://localhost:3000/api/get_productsNovelty';
 
 
   constructor(private httpClient:HttpClient) {}
 
   getProducts():Observable<Product[]>{
     return this.httpClient.get<Product[]>(this.url_get).pipe(catchError(this.handleError<any>('getProducts')));
+  }
+
+  getCategorys(category:string):Observable<Product[]>{
+    return this.httpClient.get<Product[]>(this.url_get_category+category).pipe(catchError(this.handleError<any>('getProducts')));
+  }
+
+  getNovelty():Observable<Product[]>{
+    return this.httpClient.get<Product[]>(this.url_get_novelty).pipe(catchError(this.handleError<any>('getProducts')));
   }
 
   private handleError<T>(operation = 'operation',result?:T){

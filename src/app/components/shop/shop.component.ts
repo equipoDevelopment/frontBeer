@@ -11,6 +11,7 @@ import { Product } from '../models/shop';
 export class ShopComponent {
   title = 'shop';
   products:Product[]=[];
+  novelty_products:Product[]=[];
 
   constructor( private shopService:ShopService){
    
@@ -19,12 +20,24 @@ export class ShopComponent {
 
   ngOnInit(){
     this.getProducts();
+    this.getNovelty();
   }
 
-  private getProducts():void{
+  getProducts():void{
     this.shopService.getProducts().subscribe(res=>this.products = res);
   }
 
+  getCategory(category:string):void{
+    this.shopService.getCategorys(category).subscribe(res=>this.products = res);
+  }
 
+  getNovelty():void{
+    this.shopService.getNovelty().subscribe(res=>this.novelty_products = res);
+  }
+
+  puntuacion(score:number):any{
+    
+    return new Array(Math.floor(score));
+  }
 
 }

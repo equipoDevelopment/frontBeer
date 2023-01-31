@@ -12,5 +12,5 @@ export interface Product {
     zone: string,
     score: number,
     novelty: boolean,
-    photo: string,
+    photo1: string,
 }
