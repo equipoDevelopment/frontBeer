@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ShopService } from '../../services/shop.service';
-import { productComponent } from './shop';
+import { Product } from './shop';
 
 @Component({
   selector: 'app-shop',
@@ -10,11 +10,19 @@ import { productComponent } from './shop';
 })
 export class ShopComponent {
   title = 'shop';
-  products:productComponent[]=[];
+  products:Product[]=[];
 
-  constructor( shopService:ShopService){
-    this.type=[];
+  constructor( private shopService:ShopService){
+   
       
+  }
+
+  ngOnInit(){
+    this.getProducts();
+  }
+
+  private getProducts():void{
+    this.shopService.getProducts().subscribe(res=>this.products = res);
   }
 
 
