@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { Component } from '@angular/core';
+// import { FormBuilder, FormGroup } from '@angular/forms';
 import { ShopService } from '../../services/shop.service';
-import { Product } from './shop';
+import { Product } from '../models/shop';
 
 @Component({
   selector: 'app-shop',
