@@ -20,6 +20,7 @@ import { PopupComponent } from './components/popup/popup.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +36,7 @@ import { PopupComponent } from './components/popup/popup.component';
     FooterComponent,
     ProductComponent,
     PopupComponent,
+    
   ],
   imports: [
     BrowserModule,
