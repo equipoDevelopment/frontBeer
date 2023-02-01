@@ -16,6 +16,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProductComponent } from './components/product/product.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PopupComponent } from './components/popup/popup.component';
+
 
 
 @NgModule({
@@ -32,6 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
     ShopComponent,
     FooterComponent,
     ProductComponent,
+    PopupComponent,
   ],
   imports: [
     BrowserModule,
