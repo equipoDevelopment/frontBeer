@@ -16,7 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProductComponent } from './components/product/product.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { PopupComponent } from './components/popup/popup.component';
+
 
 
 
@@ -35,7 +35,7 @@ import { PopupComponent } from './components/popup/popup.component';
     ShopComponent,
     FooterComponent,
     ProductComponent,
-    PopupComponent,
+    
     
   ],
   imports: [
