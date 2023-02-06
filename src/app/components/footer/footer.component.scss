@@ -9,3 +9,9 @@
     bottom: 0;
 }
 
+@media only screen and (max-width: 400px) {
+
+    body{
+        width: 400px;
+    }
+}
