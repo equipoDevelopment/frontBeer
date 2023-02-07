@@ -10,15 +10,7 @@
   font-size: 50px;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.brands{
-  
-  color: rgb(70, 69, 69);
-  font-size: 30px;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 
 .subheader{
   
@@ -48,7 +40,23 @@ width: 100%;
   height: 200px;
   border-radius: 10%;
 }
-.brands img{
-  display: grid;
+
+.headerMarcas{
+  text-align: center;
+}
+.brands{
+  
+  background-color: aqua;
+  height: 70px;
+  width: 100px;
+  overflow: hidden;
+  
+}
+
+.image img{
+  object-fit: cover;
+  max-width:100%;
+  max-width: 100%;
+
 }
 
