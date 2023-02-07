@@ -1,0 +1,192 @@
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.home-container{
+    text-align: center;
+    height: 100px;
+}
+    
+.header{
+    color: orangered;
+    font-size: 50px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.news{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 50px;
+
+}
+
+.dropdown{
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+    background-color: #FFFFFF;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    color: #FFFFFF;
+    background-color: #00A4BD;
+}
+
+.subheader{
+    color: rgb(169, 34, 0);
+    font-size: 20px;
+    height: 30px;
+    width: 250px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#buttonTipos{
+    // background:rgb(171, 144, 53);
+    display: none;
+    position: absolute;
+    width: 100%;
+    padding:4;
+    transition: 500ms;
+    color: rgb(169, 34, 0);
+}
+
+#buttonTipos:hover{
+    background:rgb(199, 174, 94);
+}
+
+#tipoCerveza{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    height: 220px;
+}
+
+.imagenTipo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 220px;
+    width: 170px;
+    border: 2px solid rgb(147, 147, 147);
+    border-radius: 20px;
+}
+
+.imagen{
+    height: 200px;
+    width: 170px;
+    background-size: cover;
+    background-position-x: center;
+}
+
+.separador{
+    margin-top: 40px;
+    border-top: 1px rgb(147, 147, 147) solid;;
+    margin-bottom: 20px;
+}
+
+.sugerencias{
+    // margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.columnaIzquierda{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    width: 33%;
+}
+
+.columnaCentral{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+
+.columnaDerecha{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+
+#imagenSugerencia{
+    width: 100px;
+    height: 110px;
+    border: 2px solid rgb(147, 147, 147);
+}
+
+@media only screen and (max-width: 480px) {
+
+    .home-container{
+        height: 70px;
+    }
+
+    .header {
+        font-size: 30px;
+    }
+
+    .subheader{
+        font-size: 20px;
+    }
+
+    .news{
+        height: 15px;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    #tipoCerveza{
+        margin-top: 40px;
+    }
+
+    .imagenTipo{
+        height: 160px;
+        width: 130px;
+    }
+
+    .imagen{
+        height: 140px;
+        width: 120px;
+    }
+    
+    .separador{
+        margin-top: 10px;
+    }
+    .card-text{
+        display: none;
+    }
+
+    small{
+        display: none;
+    }
+}
+
+
+
