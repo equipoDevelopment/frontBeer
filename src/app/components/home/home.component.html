@@ -1,10 +1,56 @@
-
+<div class="general">
 <div class="home-container">
   <h1 class="header">Cervezas artesanales</h1>
 </div>
 <div class="news">
-  <h1 class="subheader">Novedades</h1>
+  
+  <h1 class="subheader">Novedades</h1>  
+
+  <div class="newProducts">
+    <img src="https://okasional-beer.com/14581-large_default/walking-coeliacs.jpg" alt="Cerveza1">
+    <img src="https://okasional-beer.com/14588-large_default/tropical-riot.jpg" alt="Cerveza2">
+    <img src="https://okasional-beer.com/14583-large_default/alice-the-dog.jpg" alt="Cerveza3">
+    
+
+  </div>
 </div>
 
+
+  <h1 class="marcas">Nuestras Marcas</h1>
+  <div class="brands" *ngFor="let brand of brands">
+<img  class="image" src="/assets/logotipos_cervezas/{{brand.image}}">
+
+</div>
+
+</div>
+
+
+
+<!-- <h2 class="filtroNovedades" >Filtrar por marca</h2>
+
+<label class="checkbox">
+  <input type="checkbox"> //form control name (dentro de un form)
+  Hacendado
+</label>
+<label class="checkbox">
+  <input type="checkbox">
+  Mercadona
+</label>
+<label class="checkbox">
+  <input type="checkbox">
+  Carrefour
+</label>
+<label class="checkbox">
+  <input type="checkbox">
+  Hacendado
+</label>
+<label class="checkbox">
+  <input type="checkbox">
+  Mercadona
+</label>
+<label class="checkbox">
+  <input type="checkbox">
+  Otra marca
+</label> -->
 
 
