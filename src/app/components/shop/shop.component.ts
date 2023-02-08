@@ -12,11 +12,13 @@ export class ShopComponent {
   title = 'shop';
   products:Product[]=[];
   novelty_products:Product[]=[];
+  novelty:boolean;
 
   constructor( private shopService:ShopService){
-   
+    this.novelty = false;
       
   }
+  
 
   ngOnInit(){
     this.getProducts();
@@ -32,12 +34,15 @@ export class ShopComponent {
   }
 
   getNovelty():void{
-    this.shopService.getNovelty().subscribe(res=>this.novelty_products = res);
+    this.shopService.getNovelty().subscribe(res=>this.novelty_products = res),this.novelty= true;
   }
 
-  puntuacion(score:number):any{
-    
+  puntuacion(score:number):any{    
     return new Array(Math.floor(score));
   }
+
+  // novel(novelty:boolean)
+
+  // }
 
 }
