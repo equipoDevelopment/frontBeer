@@ -16,6 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProductComponent } from './components/product/product.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LogoComponent } from './components/logo/logo.component';
 
 
 
@@ -35,8 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     ShopComponent,
     FooterComponent,
     ProductComponent,
-    
-    
+
   ],
   imports: [
     BrowserModule,
