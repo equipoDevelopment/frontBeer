@@ -49,12 +49,15 @@
                 <div class="details" >
                     <h5 class="name">{{product.name}}</h5>
                     <p class="description">{{product.description}}</p>
-                    <p class="price">Precio: <strong>{{product.price}}€</strong> </p>
+                    <div class="priceGraduation">
+                        <p class="price">Precio: <strong>{{product.price}}€</strong> </p>
+                        <p class="graduation">Graduación: <strong>{{product.graduation}}°</strong> </p>
+                    </div>
                     <div class="score_carrito">
                         <small class="score" ><i *ngFor="let in of puntuacion(product.score)" class="bi bi-star-fill"></i></small>
-                        <button type="button" class="btn btn-dark btn-sm">
+                        <!-- <button type="button" class="btn btn-dark btn-sm">
                             <i class="bi bi-cart4"></i><span> <span class="visually-hidden">Añadido al carrito</span></span>
-                        </button>
+                        </button> -->
                     </div>
                 </div>
             </div>
