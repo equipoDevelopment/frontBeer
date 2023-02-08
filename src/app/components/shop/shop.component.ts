@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-// import { FormBuilder, FormGroup } from '@angular/forms';
 import { ShopService } from '../../services/shop.service';
 import { Product } from '../models/shop';
 
@@ -12,10 +11,8 @@ export class ShopComponent {
   title = 'shop';
   products:Product[]=[];
   novelty_products:Product[]=[];
-  novelty:boolean;
 
   constructor( private shopService:ShopService){
-    this.novelty = false;
       
   }
   
@@ -34,15 +31,11 @@ export class ShopComponent {
   }
 
   getNovelty():void{
-    this.shopService.getNovelty().subscribe(res=>this.novelty_products = res),this.novelty= true;
+    this.shopService.getNovelty().subscribe(res=>this.novelty_products = res);
   }
 
   puntuacion(score:number):any{    
     return new Array(Math.floor(score));
   }
-
-  // novel(novelty:boolean)
-
-  // }
 
 }

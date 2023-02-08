@@ -41,7 +41,7 @@
     <div class="columnas">
         <div class="sugerencias" *ngFor="let product of products;let i = index">
             <div class="tarjeta">
-                <div class="ribbon" *ngIf=""><span>Novedad</span></div>
+                <div class="ribbon" *ngIf="product.novelty"><span>Novedad</span></div>
                 <div class="imageCenter">
                     <img id="imagenSugerencia"
                     src="{{product.photo1}}"
