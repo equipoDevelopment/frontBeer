@@ -8,6 +8,7 @@ body{
 
 #logo{
     margin-left: 10px;
+    justify-content: center;
 }
 
 .home-container{
@@ -114,6 +115,8 @@ body{
     height: 200px;
     width: 160px;
     object-fit: cover;
+    width: 160px;
+    object-fit: cover;
     background-position-x: center;
 }
 
@@ -129,7 +132,18 @@ body{
     width: 100%;
 }
 
+.columnas{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
 .sugerencias{
+    display: flex;
+    width: 33%;
+}
+
+.tarjeta{
     display: flex;
     width: 33%;
 }
@@ -223,6 +237,25 @@ body{
     text-align: justify;
     margin-right: -1em;
     padding-right: 1em;
+    align-content: space-between;
+    height: 300px;
+    width: 300px;
+}
+
+.name{
+    margin: 10px;
+    height: 40px;
+    width: 280px;
+}
+
+.description{
+    overflow: hidden;
+    position: relative;
+    line-height: 1.2em;
+    max-height: 2.5em;
+    text-align: justify;
+    margin-right: -1em;
+    padding-right: 1em;
     margin-left: 10px;
     width: 280px;
   }
@@ -255,7 +288,7 @@ body{
     justify-content: space-between;
 }
 
-.score_carrito{
+.scoreZone{
     display: flex;
     justify-content: space-between;
     margin: 10px;
@@ -269,12 +302,13 @@ body{
     margin: 10px;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 400px){
 
     .home-container{
         margin-top: 10px;
         height: 100px;
         width: 100px;
+        margin-top: 10px;
     }
 
     .subheader{
@@ -282,6 +316,18 @@ body{
     }
 
     .news{
+        margin-top: 10px;
+        flex-direction: column;
+    }
+
+    #novedadesCerveza{
+        display: none;
+    }
+
+    .columnas{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         margin-top: 10px;
         flex-direction: column;
     }
@@ -325,4 +371,5 @@ body{
     .description{
         display: none;
     }
+
 }

@@ -4,6 +4,7 @@
         integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         rel="stylesheet"/>
+
     <div class="home-container">
         <div id="logo" class="contianer-fluid animate__animated animate__rubberBand mt-2">
             <app-logo></app-logo>
@@ -55,11 +56,9 @@
                         <p class="price">Precio: <strong>{{product.price}}€</strong> </p>
                         <p class="graduation">Graduación: <strong>{{product.graduation}}°</strong> </p>
                     </div>
-                    <div class="score_carrito">
+                    <div class="scoreZone">
                         <small class="score" ><i *ngFor="let in of puntuacion(product.score)" class="bi bi-star-fill"></i></small>
-                        <!-- <button type="button" class="btn btn-dark btn-sm">
-                            <i class="bi bi-cart4"></i><span> <span class="visually-hidden">Añadido al carrito</span></span>
-                        </button> -->
+                        <p class="zone">Origen: <strong>{{product.zone}}</strong> </p>
                     </div>
                 </div>
             </div>
