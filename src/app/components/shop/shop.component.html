@@ -26,23 +26,23 @@
         </div>
     </div>
     <div id="novedadesCerveza">
-        <div class="imagenTipo" >
+        <div class="imagenTipo" [routerLink]="['/product', novelty_products[0]._id]">
             <img class="imagen" src="{{novelty_products[0].photo1}}">
         </div>
-        <div class="imagenTipo">
+        <div class="imagenTipo" [routerLink]="['/product', novelty_products[2]._id]">
             <img class="imagen" src="{{novelty_products[2].photo1}}">
         </div>
-        <div class="imagenTipo">
+        <div class="imagenTipo" [routerLink]="['/product', novelty_products[4]._id]">
             <img class="imagen" src="{{novelty_products[4].photo1}}">
         </div>
-        <div class="imagenTipo">
+        <div class="imagenTipo" [routerLink]="['/product', novelty_products[6]._id]">
             <img class="imagen" src="{{novelty_products[6].photo1}}">
         </div>
     </div>
     <div class="separador"></div>
     <div class="columnas">
         <div class="sugerencias" *ngFor="let product of products;let i = index">
-            <div class="tarjeta">
+            <div class="tarjeta" [routerLink]="['/product', product._id]">
                 <div class="ribbon" *ngIf="product.novelty"><span>Novedad</span></div>
                 <div class="imageCenter">
                     <img id="imagenSugerencia"

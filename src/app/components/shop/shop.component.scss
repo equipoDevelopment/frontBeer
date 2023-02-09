@@ -100,15 +100,15 @@ body{
     align-items: center;
     height: 220px;
     width: 170px;
-    border: 2px solid rgb(147, 147, 147);
-    border-radius: 20px;
-    box-shadow: 10px 5px 5px rgb(210, 209, 209);
+    // border: 2px solid rgb(147, 147, 147);
+    // border-radius: 20px;
+    // box-shadow: 10px 5px 5px rgb(210, 209, 209);
     transition: transform 0.2s;
 }
 
 .imagenTipo:hover{
-    box-shadow: 0 4px 16px rgb(79, 79, 79);
-    transform: scale(1.05);
+    // box-shadow: 0 4px 16px rgb(79, 79, 79);
+    transform: scale(1.20);
 }
 
 .imagen{
@@ -208,7 +208,7 @@ body{
 
 .tarjeta:hover {
     box-shadow: 0 4px 16px rgb(79, 79, 79);
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 #imagenSugerencia{
