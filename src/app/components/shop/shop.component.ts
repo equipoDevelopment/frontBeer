@@ -15,7 +15,6 @@ export class ShopComponent {
   constructor( private shopService:ShopService){
       
   }
-  
 
   ngOnInit(){
     this.getProducts();
