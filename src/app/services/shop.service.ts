@@ -9,10 +9,10 @@ import { environment } from 'src/environment/environment';
 })
 export class ShopService {
 
-  private readonly urlDev = environment.urlDev;
-  private url_get = `${this.urlDev}/api/get_products`;
-  private url_get_category = `${this.urlDev}/api/get_productCategory/`;
-  private url_get_novelty = `${this.urlDev}/api/get_productsNovelty`;
+  private readonly urlProd = environment.urlProd;
+  private url_get = `${this.urlProd}/api/get_products`;
+  private url_get_category = `${this.urlProd}/api/get_productCategory/`;
+  private url_get_novelty = `${this.urlProd}/api/get_productsNovelty`;
 
 
   constructor(private httpClient:HttpClient) {}

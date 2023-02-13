@@ -11,9 +11,9 @@ import { environment } from 'src/environment/environment';
 })
 export class ProductService {
 
-  private readonly urlDev = environment.urlDev;
-  private url_get=`${this.urlDev}/api/get_product/`;
-  private url_brand=`${this.urlDev}/api/get_brands`;
+  private readonly urlProd = environment.urlProd;
+  private url_get=`${this.urlProd}/api/get_product/`;
+  private url_brand=`${this.urlProd}/api/get_brands`;
 
   constructor(private httpClient:HttpClient) {}
 

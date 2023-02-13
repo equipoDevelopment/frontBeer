@@ -9,8 +9,8 @@ import { environment } from 'src/environment/environment';
 })
 export class RegisterService {
   
-  private readonly urlDev = environment.urlDev;
-  private urlpost = `${this.urlDev}/api/register`;
+  private readonly urlProd = environment.urlProd;
+  private urlpost = `${this.urlProd}/api/register`;
 
 
   constructor(private httpClient: HttpClient) { }

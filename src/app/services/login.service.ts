@@ -9,8 +9,8 @@ import { environment } from 'src/environment/environment';
 })
 export class LoginService {
 
-  private readonly urlDev = environment.urlDev;
-  private urlpost = `${this.urlDev}/api/login`;
+  private readonly urlProd = environment.urlProd;
+  private urlpost = `${this.urlProd}/api/login`;
 
 
   constructor(private httpClient: HttpClient) { }
