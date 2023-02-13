@@ -4,14 +4,16 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of, catchError} from 'rxjs';
 import { Brand } from '../brand';
 import { Product } from '../components/models/product';
+import { environment } from 'src/environment/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  private url_get='http://localhost:3000/api/get_product/';
-  private url_brand='http://localhost:3000/api/get_brands';
+  private readonly urlDev = environment.urlDev;
+  private url_get=`${this.urlDev}/api/get_product/`;
+  private url_brand=`${this.urlDev}/api/get_brands`;
 
   constructor(private httpClient:HttpClient) {}
 

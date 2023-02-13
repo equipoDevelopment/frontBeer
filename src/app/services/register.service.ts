@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { catchError, Observable, of } from 'rxjs';
+import { environment } from 'src/environment/environment';
 
 
 @Injectable({
@@ -8,7 +9,8 @@ import { catchError, Observable, of } from 'rxjs';
 })
 export class RegisterService {
   
-  private urlpost = 'http://localhost:3000/api/register';
+  private readonly urlDev = environment.urlDev;
+  private urlpost = `${this.urlDev}/api/register`;
 
 
   constructor(private httpClient: HttpClient) { }

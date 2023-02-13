@@ -2,15 +2,17 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of, catchError } from 'rxjs';
 import { Product } from '../components/models/product';
+import { environment } from 'src/environment/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ShopService {
 
-  private url_get = 'http://localhost:3000/api/get_products';
-  private url_get_category = 'http://localhost:3000/api/get_productCategory/';
-  private url_get_novelty = 'http://localhost:3000/api/get_productsNovelty';
+  private readonly urlDev = environment.urlDev;
+  private url_get = `${this.urlDev}/api/get_products`;
+  private url_get_category = `${this.urlDev}/api/get_productCategory/`;
+  private url_get_novelty = `${this.urlDev}/api/get_productsNovelty`;
 
 
   constructor(private httpClient:HttpClient) {}
