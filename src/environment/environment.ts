@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  urlDev: 'http://localhost:3000',
-  urlProd: 'backend1.formactiu.com'
+  urlProd: 'http://localhost:3000',
 };
 
 /*
